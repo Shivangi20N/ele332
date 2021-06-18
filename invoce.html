@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        .invoces {
+            width: 35%;
+            margin: 0 auto;
+            display: block;
+            padding: 0;
+            background: #fff;
+            box-shadow: 0px 0px 10px 0px rgb(220 209 209 / 81%);
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .title-and-logo {
+            background: #3f51b5;
+            margin: 0;
+            display: inline-block;
+            width: calc(100% + 0px);
+            padding: 5px 0px;
+            float: left;
+        }
+        
+        .title-and-logo .text-left-side {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            display: inline-block;
+            padding-left: 20px;
+            float: left;
+        }
+        
+        .logo {
+            float: right;
+            margin: 0;
+            padding: 0;
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            padding-right: 10px;
+        }
+        
+        .logo a img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: auto;
+        }
+        
+        .title-and-logo .text-left-side h3 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 60px;
+        }
+        
+        .billing-address {
+            margin: 0;
+            padding: 20px 0px;
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            float: left;
+        }
+        
+        .box-diveder {
+            width: 100%;
+            margin: 0;
+            padding: 0px 15px 0px 15px;
+            flex: 0 0 25.33%;
+            max-width: 25.33%;
+            float: left;
+        }
+        
+        .box-diveder h4 {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: block;
+            font-size: 13px;
+            line-height: 25px;
+            color: #21202066;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .box-diveder p {
+            font-size: 11px;
+            line-height: 20px;
+            margin: 0;
+            padding: 0;
+            width: 65%;
+            color: #666;
+        }
+        
+        .box-diveder.invoces-rs {
+            max-width: 30%;
+            float: right;
+        }
+        
+        .second-text-area {
+            margin-top: 20px;
+        }
+        
+        .box-diveder.invoces-rs h4 {
+            text-align: right;
+        }
+        
+        .box-diveder.invoces-rs h5 {
+            text-align: right;
+        }
+        
+        .box-diveder.invoces-rs h5 span {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box-diveder.invoces-rs h5 span .fa {
+            color: #000;
+        }
+        
+        .invoces-listing {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: block;
+            float: left;
+            height: 300px;
+            overflow: scroll;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-top: 4px solid #3f51b5;
+            padding-top: 10px;
+        }
+        
+        tbody {
+            width: 100%;
+            margin: 0;
+            padding: 0px 10px;
+            display: inline-block;
+        }
+        
+        tr {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            max-width: 105%;
+            display: block;
+            margin-bottom: 5px;
+            float: left;
+            border-bottom: 1px solid #ddd;
+            padding-top: 5px;
+        }
+        
+        tr:nth-child(1) {
+            border-bottom: unset;
+            padding-bottom: 10px;
+            color: #673ab7;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        th,
+        td {
+            max-width: 20%;
+            width: 100%;
+            float: left;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            text-align: left;
+        }
+        
+        th:nth-last-child(4),
+        td:nth-last-child(4) {
+            max-width: 40%;
+        }
+        
+        td span {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            line-height: 10px;
+        }
+        
+        td p {
+            font-size: 11px;
+            line-height: 25px;
+            margin: 0;
+            padding: 0;
+            color: #7d7979;
+        }
+        
+        .final-bill-text {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+        
+        .final-bill-text .left-side {
+            margin: 0;
+            padding: 0;
+            width: 60%;
+            float: left;
+            text-align: right;
+        }
+        
+        .final-bill-text .right-side {
+            margin: 0;
+            padding: 0;
+            float: left;
+            width: 30%;
+            margin-left: 50px;
+        }
+        
+        .final-bill-text .left-side h4 {
+            font-size: 14px;
+            line-height: 25px;
+            margin: 0;
+            padding: 0;
+            color: #2196f3;
+            font-weight: bold;
+        }
+        
+        .final-bill-text .right-side h5 {
+            font-size: 13px;
+            line-height: 25px;
+            margin: 0;
+            padding: 0;
+            color: #444444;
+            font-weight: 500;
+        }
+        
+        .last-line-fibnal {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .last-line-fibnal .invoces-text-section-sttam {
+            max-width: 40%;
+            float: left;
+            margin: 0;
+            padding: 0px 10px;
+        }
+        
+        .last-line-fibnal .invoces-text-section-sttam h5 {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        
+        .last-line-fibnal .invoces-text-section-sttam h4 {
+            margin: 0;
+            padding: 0;
+            font-size: 11px;
+            line-height: 25px;
+        }
+        
+        .amout-secrtion {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+        }
+        
+        .amout-secrtion h4 {
+            color: #3f51b5;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 5px;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+        
+        .final-price {
+            float: left;
+            width: 30%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .final-price h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoces">
+        <div class="title-and-logo">
+            <div class="text-left-side">
+                <h3>Invoces</h3>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="billing-address">
+            <div class="box-diveder">
+                <h4>Billing To:</h4>
+                <p>H-33, Harphool vihar, Nagli daiory, South West Delhi, New Delhi-11043</p>
+            </div>
+            <div class="box-diveder">
+                <h4>Invoces Number To:</h4>
+                <p>524585125561246</p>
+                <div class="second-text-area">
+                    <h4>Invoces Number To:</h4>
+                    <p>524585125561246</p>
+                </div>
+            </div>
+            <div class="box-diveder invoces-rs">
+                <h4>invoces Total:</h4>
+                <h5><span><i class="fa fa-inr"></i></span>4,520.00</h5>
+            </div>
+        </div>
+        <div class="invoces-listing">
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>unit Cost</th>
+                    <th>Qty</th>
+                    <th>Amount </th>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>Your Item Name</span>
+                        <p>Book Description </p>
+                    </td>
+                    <td>
+                        <h4><span><i class="fa fa-inr"></i></span>1000</h4>
+                    </td>
+                    <td>
+                        <h3>1</h3>
+                    </td>
+                    <td>
+                        <h3>100</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="final-bill-text">
+            <div class="left-side">
+                <h4>SubTotal</h4>
+                <h4>Tax </h4>
+                <h4>Total</h4>
+            </div>
+            <div class="right-side">
+                <h5>4000.00</h5>
+                <h5>520.00</h5>
+                <h5> 4520.00</h5>
+            </div>
+        </div>
+        <div class="last-line-fibnal">
+            <div class="invoces-text-section-sttam">
+                <h5>invoices Taxs</h5>
+                <h4>Ex Pieass pAy You invoces by...</h4>
+            </div>
+            <div class="amout-secrtion">
+                <h4> Amout Due</h4>
+            </div>
+            <div class="final-price">
+                <h2>4520.00</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
